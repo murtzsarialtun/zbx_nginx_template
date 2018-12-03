@@ -1,0 +1,2 @@
+Cmnd_Alias NGINX = /var/lib/zabbix/zbx_nginx_stats.py
+zabbix  ALL=(ALL) NOPASSWD: NGINX

@@ -48,16 +48,9 @@ seek_file = '/tmp/nginx_log_stat'
 chmod +x zbx_nginx_stats.py
 ```
 
-4) Configure cron to run script every one minute:
-```
-$ sudo crontab -e
+4) Import `zbx_nginx_template.xml` into zabbix in Tepmplate section web gui.
 
-*/1 * * * * /etc/zabbix/script/nginx/zbx_nginx_stats.py
-```
-
-5) Import `zbx_nginx_template.xml` into zabbix in Tepmplate section web gui.
-
-6) Add the following configurations to you Nginx configuration file.
+5) Add the following configurations to you Nginx configuration file.
 ```
 location /nginx_stat {
   stub_status on;       # Turn on nginx stats
